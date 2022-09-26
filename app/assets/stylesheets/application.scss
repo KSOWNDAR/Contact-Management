@@ -13,3 +13,59 @@
  *= require_tree .
  *= require_self
  */
+*{
+    margin: 10px;
+    align-items: center;
+}
+
+.main h1{
+    text-align: center;
+    color: red;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.new_contact{
+    text-align: center;
+    color: red;
+}
+
+.message{
+    color: red;
+}
+
+.form{
+    border: 2px solid black;
+}
+
+input{
+    border: 1px solid blue;
+}
+
+textarea{
+    border: 1px solid blue;
+}
+
+input[type = button]
+{
+    align-items: center;
+}
+
+.first_name{
+    display: flex;
+}
+
+.firstnamelastname{
+    display: flex;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+.details{
+    border: 1px solid blue;
+}

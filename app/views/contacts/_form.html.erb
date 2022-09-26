@@ -1,12 +1,13 @@
+<div class = "form">
 <%= form_with model: @contact do |form| %>
    <div>
       <%= form.label :first_name %><br>
       <%= form.text_field :first_name %>
       <% @contact.errors.full_messages_for(:first_name).each do |message| %>
-        <div><%= message %></div>
+        <div class = "message"><%= message %></div>
       <% end %>   
     </div> 
-
+    
     <div>
       <%= form.label :last_name %><br>
       <%= form.text_field :last_name %>
@@ -16,7 +17,7 @@
       <%= form.label :phone_number %><br>
       <%= form.text_field :phone_number %>
       <% @contact.errors.full_messages_for(:phone_number).each do |message| %>
-        <div><%= message %></div>
+        <div class = "message"><%= message %></div>
       <% end %> 
     </div> 
 
@@ -40,8 +41,10 @@
       <%= form.text_area :address %>
     </div> 
 
-    <div>
-      <%= form.submit :save%>
+    <div class = "button">
+      <%= form.submit :Save%>
+      <%= link_to "Back", root_path(@contact) %>
     </div>  
 <% end %>  
+</div>
      

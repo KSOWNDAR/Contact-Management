@@ -1,11 +1,14 @@
-<h1>My Contacts</h1>
+<div class ="main">
+  <h1>My Contacts</h1>
+</div>
 
-<ul>
+<div class = "names">
+<ol>
    <% @contacts.each do |contact| %>
     <li>
-      <%= link_to contact.first_name, contact %>
+      <div class = "name"><%= link_to contact.first_name, contact %></div>
     </li>
    <% end %>
-</ul>    
-
-<%= link_to "Create New Contact", new_contact_path %>
+</ol>    
+</div>
+<%= link_to  "Create New Contact", new_contact_path %>
