@@ -1,0 +1,12 @@
+<h1><%= @contact.first_name %></h1>
+<p><%= @contact.last_name %></p>
+<p><%= @contact.phone_number %></p>
+<p><%= @contact.email %></p>
+<p><%= @contact.company_name %></p>
+<p><%= @contact.birthday %></p>
+<p><%= @contact.address %></p>
+
+<ul> 
+  <li><%= link_to "Edit Contact", edit_contact_path(@contact) %></li>
+  <li><%= link_to "Delete Contact", @contact, data: { 'method': :delete, 'confirm': "Are you sure?" } %></li>
+</ul>

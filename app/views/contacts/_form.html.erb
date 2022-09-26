@@ -1,0 +1,47 @@
+<%= form_with model: @contact do |form| %>
+   <div>
+      <%= form.label :first_name %><br>
+      <%= form.text_field :first_name %>
+      <% @contact.errors.full_messages_for(:first_name).each do |message| %>
+        <div><%= message %></div>
+      <% end %>   
+    </div> 
+
+    <div>
+      <%= form.label :last_name %><br>
+      <%= form.text_field :last_name %>
+    </div> 
+    
+    <div>
+      <%= form.label :phone_number %><br>
+      <%= form.text_field :phone_number %>
+      <% @contact.errors.full_messages_for(:phone_number).each do |message| %>
+        <div><%= message %></div>
+      <% end %> 
+    </div> 
+
+    <div>
+      <%= form.label :email %><br>
+      <%= form.text_field :email %>
+    </div> 
+    
+    <div>
+      <%= form.label :company_name %><br>
+      <%= form.text_field :company_name %>
+    </div> 
+
+    <div>
+      <%= form.label :birthday %><br>
+      <%= form.text_field :birthday %>
+    </div> 
+
+    <div>
+      <%= form.label :address %><br>
+      <%= form.text_area :address %>
+    </div> 
+
+    <div>
+      <%= form.submit :save%>
+    </div>  
+<% end %>  
+     
