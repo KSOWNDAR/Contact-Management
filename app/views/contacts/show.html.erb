@@ -1,4 +1,10 @@
-<p>Contact image: <%= @contact.photo %></p>
+
+<% if @contact.image.attached? %>
+    <%= image_tag(@contact.image,:class => "image") %>
+  <% else %>
+    <img class="image" src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+<% end %>
+
 <div class = "first_name">
   <h3><%= @contact.first_name %></h3>
   <h3><%= @contact.last_name %></h3>
