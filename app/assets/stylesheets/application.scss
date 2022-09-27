@@ -18,9 +18,80 @@
     align-items: center;
 }
 
+.names{
+    margin: 0 auto;
+    height: 100vh;
+    background-color : grey;
+}
+
 .main h1{
     text-align: center;
     color: red;
+}
+
+.contact-search{
+    font-size: 1.2em;
+    padding: .3em;
+    border-radius: 100px;
+    border: 1px solid white;
+    outline: none;
+}
+
+i{
+    font-size: 1.5em;
+}
+
+.name{
+    font-size: 1.2em;
+}
+
+ol{
+    padding: 0;
+    width: 100%;
+}
+
+hr{
+    border: 1px solid #494a4b ;
+}
+
+.contact-list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5em;
+    transition: 0.3s;
+}
+
+.text{
+    padding-left: 1em;
+}
+.contact-list:hover{
+    background-color: rgba(255, 255, 255, 0.897) ;
+}
+
+.name{
+    font-weight: bold;
+}
+.number{
+    width: 6em;
+    text-align: center;
+    padding: .4em .5em;
+    border-radius: 100px ;
+    border-top-left-radius: 0;
+    background-color: #75a853;
+    font-size: 1.0em;
+    font-weight: bold;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(46,208,158,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.form{
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(46,208,158,1) 0%, rgba(0,212,255,1) 100%);
 }
 
 a:link{
@@ -41,7 +112,11 @@ a:link{
 }
 
 input{
-    border: 1px solid blue;
+    font-size: 1.2em;
+    padding: .3em;
+    border-radius: 100px;
+    border: 1px solid white;
+    outline: none;
 }
 
 textarea{
@@ -54,7 +129,8 @@ input[type = button]
 }
 
 .first_name{
-    display: flex;
+    color: red;
+    display: flex;   
 }
 
 .firstnamelastname{
@@ -66,6 +142,16 @@ ul{
     display: flex;
 }
 
+ul li{
+    font-size: 1.2em;
+    padding: .3em;
+    border-radius: 100px;
+    border: 1px solid red;
+    outline: none;
+}
+
 .details{
     border: 1px solid blue;
+    background-color: gray;
+    color: white;
 }

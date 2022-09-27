@@ -1,14 +1,28 @@
 <div class ="main">
   <h1>My Contacts</h1>
+  <script src="https://kit.fontawesome.com/769209a579.js" crossorigin="anonymous"></script>
 </div>
+
+<div class = "names">
+ <div class = "container">
+  <form class = "search-bar">
+    <input type = "search-name" class = "contact-search" placeholder = "Search" name = "searcch-area">
+  </form>
+  <a class="btn" href="<%= new_contact_path %>"><i class="fas fa-plus-circle add"></i></a>
+ </div>  
 
 <div class = "names">
 <ol>
    <% @contacts.each do |contact| %>
-    <li>
+    <li class = "contact-list">
       <div class = "name"><%= link_to contact.first_name, contact %></div>
+      <div class = "number"><%= link_to contact.phone_number, contact %></div>
+      <div class = "phone">
+        <i class = "fas fa-phone"></i>
+        <i class = "fas fa-sms text"></i>
+      </div>
     </li>
+    <hr>
    <% end %>
 </ol>    
 </div>
-<%= link_to  "Create New Contact", new_contact_path %>

@@ -6,7 +6,7 @@ one:
   phone_number: 1
   email: MyString
   company_name: MyString
-  birthday: MyString
+  birthday: 2022-09-27
   address: MyString
 
 two:
@@ -15,5 +15,5 @@ two:
   phone_number: 1
   email: MyString
   company_name: MyString
-  birthday: MyString
+  birthday: 2022-09-27
   address: MyString
