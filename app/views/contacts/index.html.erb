@@ -2,7 +2,7 @@
   <h1>My Contacts</h1>
   <script src="https://kit.fontawesome.com/769209a579.js" crossorigin="anonymous"></script>
 </div>
-
+<%= paginate @contacts %>
 <div class = "names">
  <div class = "container">
   <form class = "search-bar">
@@ -24,3 +24,4 @@
    <% end %>
 </ol>    
 </div>
+<%= paginate @contacts%>

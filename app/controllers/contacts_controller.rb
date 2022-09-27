@@ -3,9 +3,9 @@ class ContactsController < ApplicationController
   before_action :authenticate_user!, except: %i[home]
   
   def index
-    @contacts = Contact.all 
+    @contacts = Contact.order(:first_name).page params[:page]
   end
-
+   
   def show 
     @contact = Contact.find(params[:id])
   end
