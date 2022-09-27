@@ -1,5 +1,10 @@
 <div class = "form">
 <%= form_with model: @contact do |form| %>
+   <div class = "contact_image">
+    <%= form.label :Choose_Profile_Photo %><br>
+    <%= form.file_field :photo %>
+   </div>
+
    <div>
       <%= form.label :first_name %><br>
       <%= form.text_field :first_name %>
