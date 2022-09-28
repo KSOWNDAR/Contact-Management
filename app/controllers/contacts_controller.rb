@@ -1,13 +1,13 @@
 class ContactsController < ApplicationController
 
   before_action :authenticate_user!, except: %i[home]
+  before_action :find_contact,only:[:show, :edit, :update, :destroy]
   
   def index
     @contacts = Contact.order(:first_name).page params[:page]
   end
    
   def show 
-    @contact = Contact.find(params[:id])
   end
 
   def new
@@ -25,11 +25,9 @@ class ContactsController < ApplicationController
   end 
   
   def edit 
-    @contact = Contact.find(params[:id])
   end
 
   def update
-    @contact = Contact.find(params[:id])
 
     if @contact.update(contact_params)
       redirect_to @contact 
@@ -39,12 +37,14 @@ class ContactsController < ApplicationController
   end
 
   def destroy
-    @contact = Contact.find(params[:id])
     @contact.destroy
     
     redirect_to root_path
   end 
-
+  
+  def find_contact
+    @contact = Contact.find(params[:id])
+  end
   private
     def contact_params 
       params.require(:contact).permit(:first_name,:last_name,:phone_number,:email,:company_name,:birthday,:address,:image)

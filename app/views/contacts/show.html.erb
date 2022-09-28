@@ -1,4 +1,4 @@
-
+<div class = "details">
 <% if @contact.image.attached? %>
     <%= image_tag(@contact.image,:class => "image") %>
   <% else %>
@@ -9,7 +9,7 @@
   <h3><%= @contact.first_name %></h3>
   <h3><%= @contact.last_name %></h3>
 </div>
-<div class = "details">
+
   <p>Contact Number: <%= @contact.phone_number %></p>
   <p>E-mail        : <%= @contact.email %></p>
   <p>Company Name  : <%= @contact.company_name %></p>

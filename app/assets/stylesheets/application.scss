@@ -20,7 +20,8 @@
 
 .names{
     margin: 0 auto;
-    background-color : grey;
+    background-color : white;
+    border : 1px solid black;
 }
 
 .main h1{
@@ -74,7 +75,7 @@ hr{
     padding-left: 1em;
 }
 .contact-list:hover{
-    background-color: rgba(255, 255, 255, 0.897) ;
+    background-color: rgb(236, 234, 234) ;
 }
 
 .name{
@@ -111,7 +112,10 @@ a:link{
 }
 
 .message{
-    color: black;
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
 }
 
 .image{
@@ -196,7 +200,8 @@ ul li{
 }
 
 .details{
-    border: 1px solid blue;
-    background-color: gray;
-    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
 }
