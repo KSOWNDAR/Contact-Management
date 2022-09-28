@@ -1,24 +1,24 @@
 <div class = "details">
-<% if @contact.image.attached? %>
+  <% if @contact.image.attached? %>
     <%= image_tag(@contact.image,:class => "image") %>
   <% else %>
     <img class="image" src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
-<% end %>
+  <% end %>
 
-<div class = "first_name">
-  <h3><%= @contact.first_name %></h3>
-  <h3><%= @contact.last_name %></h3>
+    <h3><%= @contact.first_name %></h3>
+    <h3><%= @contact.last_name %></h3>
+  
+
+  <p><b>Contact Number</b>:<%= @contact.phone_number %></p>
+  <p><b>E-mail</b>: <%= @contact.email %></p>
+  <p><b>Company Name</b>:<%= @contact.company_name %></p>
+  <p><b>Birthday</b>:<%= @contact.birthday %></p>
+  <p><b>Address </b>:<%= @contact.address %></p>
 </div>
-
-  <p>Contact Number: <%= @contact.phone_number %></p>
-  <p>E-mail        : <%= @contact.email %></p>
-  <p>Company Name  : <%= @contact.company_name %></p>
-  <p>Birthday      : <%= @contact.birthday %></p>
-  <p>Address       : <%= @contact.address %></p>
+<div class = "options">
+  <ul> 
+   <li><%= link_to "Edit Contact", edit_contact_path(@contact) %></li>
+   <li><%= link_to "Delete Contact", @contact, data: { 'method': :delete, 'confirm': "Are you sure?" } %></li>
+   <li><%= link_to "Home", root_path(@contact) %></li>
+ </ul>
 </div>
-
-<ul> 
-  <li><%= link_to "Edit Contact", edit_contact_path(@contact) %></li>
-  <li><%= link_to "Delete Contact", @contact, data: { 'method': :delete, 'confirm': "Are you sure?" } %></li>
-  <li><%= link_to "Home", root_path(@contact) %></li>
-</ul>
