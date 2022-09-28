@@ -2,7 +2,8 @@
   <h1>My Contacts</h1>
   <script src="https://kit.fontawesome.com/769209a579.js" crossorigin="anonymous"></script>
 </div>
-<%= paginate @contacts %>
+
+
 <div class = "names">
  <div class = "container">
   <form class = "search-bar">
@@ -13,6 +14,11 @@
 <ol>
    <% @contacts.each do |contact| %>
     <li class = "contact-list">
+      <% if @contact %>
+         <%= image_tag(@contact.image,:class => "image") %>
+      <% else %>
+         <img class="image" src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+      <% end %>
       <div class = "name"><%= link_to contact.first_name, contact %></div>
       <div class = "number"><%= link_to contact.phone_number, contact %></div>
       <div class = "phone">
@@ -24,4 +30,5 @@
    <% end %>
 </ol>    
 </div>
-<%= paginate @contacts%>
+
+<div class = "page"> <%= paginate @contacts %></div>

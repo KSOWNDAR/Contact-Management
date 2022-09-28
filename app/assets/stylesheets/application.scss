@@ -20,7 +20,6 @@
 
 .names{
     margin: 0 auto;
-    height: 100vh;
     background-color : grey;
 }
 
@@ -152,12 +151,42 @@ input[type = button]
 .firstnamelastname{
     display: flex;
 }
+.pagination {
+    display: inline-block;
+    text-align: center;
+}
 
+.page{
+    text-align: center;
+}
+.pagination a {
+    margin: 0 4px;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid gray;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+  
+.pagination a:hover:not(.active) {background-color: #ddd;}  
 ul{
     list-style: none;
     display: flex;
 }
-
+.pagination a:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+  
+.pagination a:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
 ul li{
     font-size: 1.2em;
     padding: .3em;
