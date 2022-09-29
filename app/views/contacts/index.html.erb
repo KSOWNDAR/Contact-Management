@@ -14,8 +14,8 @@
 <ol>
    <% @contacts.each do |contact| %>
     <li class = "contact-list">
-      <% if @contact %>
-         <%= image_tag(@contact.image,:class => "image") %>
+      <% if contact.image.attached? %>
+         <%= image_tag(contact.image,:class => "image") %>
       <% else %>
          <img class="image" src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
       <% end %>

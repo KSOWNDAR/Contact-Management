@@ -29,6 +29,9 @@
     <div>
       <%= form.label :email %><br>
       <%= form.text_field :email %>
+      <% @contact.errors.full_messages_for(:email).each do |message| %>
+        <div class = "message"><%= message %></div>
+      <% end %> 
     </div> 
     
     <div>

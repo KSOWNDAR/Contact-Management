@@ -24,11 +24,20 @@
     border : 1px solid black;
 }
 
+.main {
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+  }
+
 .main h1{
     text-align: center;
-    color: red;
+    font-size: 30px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
-
 .contact-search{
     font-size: 1.2em;
     padding: .3em;
@@ -38,11 +47,17 @@
 }
 
 .login{
+    background: #ECECEC;
+    border-radius: 15px;
+    padding: 10px 20px;
+    display: block;
+    border: 1px solid red;
     float: right;
-    background-color: #199319;
     color: white;
     padding: 5px 20px;
     text-decoration: none;
+    margin-right: 20px;
+    margin-top: 28px;
 }
 
 i{
