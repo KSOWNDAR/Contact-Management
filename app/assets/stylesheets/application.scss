@@ -214,10 +214,12 @@ ul{
   }
 ul li{
     font-size: 1.2em;
-    padding: .3em;
-    border-radius: 100px;
-    border: 1px solid red;
     outline: none;
+    background: #ECECEC;
+    border-radius: 15px;
+    padding: 10px 20px;
+    display: block;
+    border: 1px solid red;
 }
 
 .details{
@@ -232,5 +234,5 @@ ul li{
 
 .options{
     align-items: center;
-    margin-left: 400px;
+    margin-left: 375px;
 }

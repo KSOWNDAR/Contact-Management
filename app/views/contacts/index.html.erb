@@ -33,4 +33,6 @@
 
 <%if !(params[:search].present?) %> 
   <div class = "page"> <%= paginate @contacts %></div>
+<%else%>
+  <ul><li><%= link_to "Back", root_path(@contact) %></div></li></ul>
 <% end %>
