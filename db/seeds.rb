@@ -18,7 +18,7 @@ contacts = []
     company_name: Faker::Company.name,
     birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
     address: "#{Faker::Address.street_name} #{Faker::Address.zip} #{Faker::Address.city}",
-    photo: nil 
+    group: ["Friends","Family","Office","Others"].sample
   }
     contacts.push(new_contact)
 end
