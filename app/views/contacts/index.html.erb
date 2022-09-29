@@ -7,7 +7,7 @@
 <div class = "names">
  <div class = "container">
   <form class = "search-bar">
-    <input type = "search-name" class = "contact-search" placeholder = "Search" name = "searcch-area">
+    <input type = "search-name" class = "contact-search" placeholder = "Search" name = "search">
   </form>
   <a class="btn" href="<%= new_contact_path %>"><i class="fas fa-plus-circle add"></i></a>
  </div>  
@@ -31,4 +31,6 @@
 </ol>    
 </div>
 
-<div class = "page"> <%= paginate @contacts %></div>
+<%if !(params[:search].present?) %> 
+  <div class = "page"> <%= paginate @contacts %></div>
+<% end %>

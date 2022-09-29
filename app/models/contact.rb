@@ -5,4 +5,5 @@ class Contact < ApplicationRecord
     validates_uniqueness_of :email
     has_one_attached :image 
     paginates_per 6
+    scope :filter_by_starts_with, -> (first_name) { where("first_name like ?", "#{first_name}%")}
 end

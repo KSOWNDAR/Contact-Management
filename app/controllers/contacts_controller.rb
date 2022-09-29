@@ -5,6 +5,7 @@ class ContactsController < ApplicationController
   
   def index
     @contacts = Contact.order(:first_name).page params[:page]
+    @contacts = Contact.filter_by_starts_with(params[:search]) if params[:search].present?
   end
    
   def show 
@@ -47,6 +48,6 @@ class ContactsController < ApplicationController
   end
   private
     def contact_params 
-      params.require(:contact).permit(:first_name,:last_name,:phone_number,:email,:company_name,:birthday,:address,:image)
+      params.require(:contact).permit(:first_name,:last_name,:phone_number,:email,:company_name,:birthday,:address,:image,:search)
     end
 end
