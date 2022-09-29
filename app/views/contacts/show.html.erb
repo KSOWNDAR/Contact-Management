@@ -1,5 +1,6 @@
 <div class = "main">
    <h1>Contact Details</h1>
+   <script src="https://kit.fontawesome.com/769209a579.js" crossorigin="anonymous"></script>
 </div>
 
 <div class = "details">
@@ -8,16 +9,17 @@
   <% else %>
     <img class="image" src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
   <% end %>
-
+  <hr>
+  <div class = "first_name">
     <h3><%= @contact.first_name %></h3>
     <h3><%= @contact.last_name %></h3>
-  
+  </div>
 
-  <p><b>Contact Number</b>:<%= @contact.phone_number %></p>
-  <p><b>E-mail</b>: <%= @contact.email %></p>
-  <p><b>Company Name</b>:<%= @contact.company_name %></p>
-  <p><b>Birthday</b>:<%= @contact.birthday %></p>
-  <p><b>Address </b>:<%= @contact.address %></p>
+  <p><i class="fa-solid fa-phone"></i><%= @contact.phone_number %></p>
+  <p><i class="fa-solid fa-at"></i> <%= @contact.email %></p>
+  <p><i class="fa-solid fa-building"></i><%= @contact.company_name %></p>
+  <p><i class="fa-solid fa-cake-candles"></i><%= @contact.birthday %></p>
+  <p><i class="fa-solid fa-location-dot"></i><%= @contact.address %></p>
 </div>
 <div class = "options">
   <ul> 

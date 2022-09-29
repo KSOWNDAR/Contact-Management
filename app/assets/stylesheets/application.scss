@@ -29,6 +29,9 @@
     padding: 20px 10px;
   }
 
+.fn{
+    display: flex;
+}
 .main h1{
     text-align: center;
     font-size: 30px;
@@ -113,7 +116,7 @@ hr{
 }
 
 .form{
-    justify-content: space-evenly;
+    font-size: 18px;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(46,208,158,1) 0%, rgba(0,212,255,1) 100%);
 }
 
@@ -166,7 +169,7 @@ input[type = button]
 .first_name{
     color: red;
     display: flex;  
-    align-items:center ; 
+    margin-left: 100px; 
 }
 
 .firstnamelastname{
@@ -222,7 +225,9 @@ ul li{
     box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.2);
     max-width: 400px;
     margin: auto;
+    margin-bottom: 5px;
     text-align: center;
+    height: 500px;
 }
 
 .options{

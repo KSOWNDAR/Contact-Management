@@ -1,11 +1,11 @@
+<script src="https://kit.fontawesome.com/769209a579.js" crossorigin="anonymous"></script>
 <div class = "form">
 <%= form_with model: @contact do |form| %>
-   <div class = "contact_image">
-    <%= form.label :image %><br>
+   <div class = "fn">
+    <%= form.label :upload_image %><br>
     <%= form.file_field :image %>
    </div>
-
-   <div>
+    <div class ="fn">
       <%= form.label :first_name %><br>
       <%= form.text_field :first_name %>
       <% @contact.errors.full_messages_for(:first_name).each do |message| %>
@@ -13,12 +13,12 @@
       <% end %>   
     </div> 
     
-    <div>
+    <div class = "fn">
       <%= form.label :last_name %><br>
       <%= form.text_field :last_name %>
     </div> 
-    
-    <div>
+
+    <div class = "fn">
       <%= form.label :phone_number %><br>
       <%= form.text_field :phone_number %>
       <% @contact.errors.full_messages_for(:phone_number).each do |message| %>
@@ -26,7 +26,7 @@
       <% end %> 
     </div> 
 
-    <div>
+    <div class = "fn">
       <%= form.label :email %><br>
       <%= form.text_field :email %>
       <% @contact.errors.full_messages_for(:email).each do |message| %>
@@ -34,17 +34,17 @@
       <% end %> 
     </div> 
     
-    <div>
+    <div class = "fn">
       <%= form.label :company_name %><br>
       <%= form.text_field :company_name %>
     </div> 
 
-    <div>
+    <div class = "fn">
       <%= form.label :birthday %><br>
       <%= form.date_field :birthday %>
     </div> 
 
-    <div>
+    <div class = "fn">
       <%= form.label :address %><br>
       <%= form.text_area :address %>
     </div> 
